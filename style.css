@@ -1,0 +1,214 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.main-section{
+    width: 100vw;
+    height: 100vh;
+    background-color: #34c9eb;
+    justify-content: center;
+    position: fixed;
+}
+
+.main-container{
+    width: 522px;
+    height: 254px;
+    background-color: #fff;
+    padding: 50px;
+    margin: 133px 17px 17px 317px;
+    text-align: center;
+    border-radius: 15px;
+    border: 1px solid #34c9eb;
+}
+
+.main-heading{
+    margin: 0px -10px;
+    color: #3446eb;
+}
+
+.main-paragraph{
+    color: #3446eb;
+}
+form{
+    margin: 20px 0px;
+    display: grid;
+}
+
+.upload-file{
+    padding: 10px 10px 10px 70px;
+    margin: 0px 0px 13px 98px;
+    border: 1px solid #34c9eb;
+    width: 245px;
+    border-radius: 10px;
+    color: #333;
+}
+
+.name-feild{
+    width: 305px;
+    padding: 10px;
+    margin: 0px 0px 13px 98px;
+    border: 1px solid #34c9eb;
+    border-radius: 7px;
+    text-align: center;
+    outline: none;
+}
+
+.upload-button{
+    background-color: #34c9eb;
+    color: #333;
+    padding: 10px;
+    width: 326px;
+    margin: 0px 0px 13px 98px;
+    border-radius: 15px;
+    border: none;
+    transition: .7s;
+}
+
+.upload-button:hover{
+    padding: 13px;
+    background-color: transparent;
+    color: #3446eb;
+    border: 1px solid #34c9eb;
+}
+
+.developer{
+    font-size: 10px;
+    margin: 10px 0px 0px 0px;
+}
+
+
+/* color = #43121E  , #2A8114 */
+
+/* second page */
+
+.main-section-two{
+    width: 100vw;
+    height: 100vh;
+    background-color: #34c9eb;
+    position: fixed;
+    display: flex;
+}
+.main-container-two{
+    width: 446px;
+    height: 551px;
+    background-image: url('./images/frame\ one.png');
+    background-size: cover;
+    background-position: center;
+    margin: 6px 17px 17px 447px;
+    border-radius: 15px;
+    border: 1px solid #34c9eb;
+}
+
+.user-image{
+    position: absolute;
+    width: 122px;
+    height: 116px;
+    border-radius: 90%;
+    margin: 249px -12px 6px 162px;
+}
+
+.user-name{
+    margin: 391px 0px;
+    text-align: center;
+    color: #43121E;
+    font-size: 20px;
+}
+
+.download-button{
+    height: 51px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #3446eb;
+    border: none;
+    color: #fff;
+    margin: 0px 20px 0px 447px;
+    cursor: pointer;
+}
+
+.download-button:hover{
+    background-color: #000c7c;
+}
+
+.refresh-button{
+    height: 51px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #db000f;
+    border: none;
+    color: #fff;
+    margin: 0px 20px 0px 5px;
+    cursor: pointer;
+}
+
+.refresh-button:hover{
+    background-color: #850009;
+}
+
+@media screen and (max-width: 600px){
+    .main-container{
+        width: 263px;
+        height: 475px;
+        margin: 49px 17px 17px 5px;
+    }
+
+    .main-heading{
+        margin: 84px 0px 0px -1px
+    }
+
+    .upload-file{
+        padding: 10px 10px 10px 70px;
+        margin: 0px 0px 13px -31px;
+        border: 1px solid #34c9eb;
+        width: 245px;
+        border-radius: 10px;
+        color: #333;
+    }
+
+    .name-feild{    
+        margin: 0px 0px 13px -31px;
+    }
+    
+    .upload-button{
+        margin: 0px 0px 13px -31px;
+    }
+    
+    .developer{
+        font-size: 10px;
+        margin: 10px 0px 0px -30px;
+    }
+
+    .main-section-two{
+        display: block;
+    }
+
+    /* page -two */
+    .main-container-two{
+        width: 366px;
+        height: 450px;
+        background-image: url('./images/frame\ one.png');
+        background-size: cover;
+        background-position: center;
+        margin: 48px 17px 17px 2px;
+        border-radius: 15px;
+        border: 1px solid #34c9eb;
+    }
+
+    .user-image{
+        position: absolute;
+        width: 97px;
+        height: 95px;
+        border-radius: 90%;
+        margin: 204px -12px 6px 135px;
+    }
+    
+    .user-name{
+        margin: 318px 0px;
+        font-size: 15px;
+    }
+
+    .download-button{
+        margin: 0px 20px 0px 1px;
+    }
+}

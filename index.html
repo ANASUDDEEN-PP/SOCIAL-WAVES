@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GREEN GRASS REGISTRATION WAVE</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,900;1,100;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="main-section">
+        <div class="main-container">
+            <h1 class="main-heading">GREEN GRASS REGISTRATION WAVE</h1>
+            <p class="main-paragraph">Upload your photo and name</p>
+            <form id="myForm" action="#" method="post" enctype="multipart/form-data">
+                <input type="file" id="fileInput" class="upload-file" accept="image/*">
+                <input type="text" id="username" name="username" class="name-feild" placeholder="Enter your Full name" required>
+                <input type="button" id="submitButton" class="upload-button" value="Submit">
+                <p class="developer"><a href="https://www.instagram.com/ana.su._/">Developed by <span>Anasudddeen</span></a></p>
+            </form>
+        </div>
+        
+        <div id="resultSection" class="main-section-two" style="display: none;">
+            <div class="main-container-two">
+                <img id="resultImage" alt="user-image" class="user-image">
+                <h4 id="resultUsername" class="user-name">User Name</h4>
+            </div>
+            <button class="download-button">Save to Gallery</button>
+            <button class="refresh-button" onclick="pageRefresh()">Give me One more Chance</button>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById('submitButton').addEventListener('click', function() {
+
+            // Get form data
+            var username = document.getElementById('username').value;
+            var fileInput = document.getElementById('fileInput');
+            
+            // Check if both username and file are provided
+            if (username && fileInput.files.length > 0) {
+                
+                alert("Congrtz, Now you are a Member in GREEN GRASS ARTS AND SPORTS...");
+                // Update result section with entered data
+                document.getElementById('resultUsername').textContent = username;
+                
+                var resultImage = document.getElementById('resultImage');
+                var reader = new FileReader();
+
+                reader.onload = function(e) {
+                    resultImage.src = e.target.result;
+                };
+
+                reader.readAsDataURL(fileInput.files[0]);
+
+                // Show the result section and hide the registration form
+                document.querySelector('.main-container').style.display = 'none';
+                document.getElementById('resultSection').style.display = 'block';
+            }else{
+                alert("Check your datas One more time, Something Went Wrong");
+            }
+        });
+
+        function pageRefresh(){
+            location.reload();
+            alert("Well... Giving you one more chance.");
+        }
+    </script>
+</body>
+</html>
