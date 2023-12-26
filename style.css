@@ -93,7 +93,7 @@ form{
 .main-container-two{
     width: 446px;
     height: 551px;
-    background-image: url('./images/frame\ one.png');
+    background-image: url('/images/frame one.png');
     background-size: cover;
     background-position: center;
     margin: 6px 17px 17px 447px;
