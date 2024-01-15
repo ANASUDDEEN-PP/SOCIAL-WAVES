@@ -89,38 +89,45 @@ form{
     background-color: #34c9eb;
     position: fixed;
     display: flex;
+    margin: 31px 8px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-.main-container-two{
+#htmlContent{
     width: 446px;
     height: 551px;
-    background-image: url('./images/frame one.png');
-    background-size: cover;
-    background-position: center;
-    margin: 6px 17px 17px 447px;
+    margin: 13px 25px -19px 419px;
     border-radius: 15px;
     border: 1px solid #34c9eb;
 }
 
+.main-image{
+    width: 466px;
+    height: 557px;
+}
+
 .user-image{
     position: absolute;
-    width: 122px;
-    height: 116px;
-    border-radius: 90%;
-    margin: 249px -12px 6px 162px;
+    width: 146px;
+    height: 139px;
+    margin: -324px -19px 6px 165px;
+    z-index: -1;
 }
 
 .user-name{
-    margin: 391px 0px;
+    margin-top: -174px;
+    margin-right: -18px;
     text-align: center;
     color: #43121E;
     font-size: 20px;
 }
 
 .download-button{
-    height: 51px;
     padding: 10px;
     border-radius: 10px;
     background-color: #3446eb;
+    text-decoration: none;
     border: none;
     color: #fff;
     margin: 0px 20px 0px 447px;
@@ -132,7 +139,6 @@ form{
 }
 
 .refresh-button{
-    height: 51px;
     padding: 10px;
     border-radius: 10px;
     background-color: #db000f;
@@ -141,27 +147,54 @@ form{
     margin: 0px 20px 0px 5px;
     cursor: pointer;
 }
-.buttons{
-    display: flex;
-}
+
 .refresh-button:hover{
     background-color: #850009;
 }
 
+.buttons{
+    display: flex;
+    margin: -29px 32px;
+
+}
+
 @media screen and (max-width: 600px){
-    .main-container{
+
+    /* form container */
+    .main-container {
+        width: 382px;
+        height: 438px;
+        padding: 0px;
+        margin: 87px 17px 17px 8px;
+    }
+    #htmlContent{
         width: 263px;
         height: 475px;
-        margin: 49px 17px 17px 5px;
+        margin: -21px 17px 17px 5px;
+    }
+
+    .main-image{
+        width: 367px;
+        height: 457px;
+        margin: 43px 0px;
     }
 
     .main-heading{
+        font-size: 19px;
         margin: 84px 0px 0px -1px
+    }
+
+    .main-paragraph{
+        font-size: 13px;
+    }
+
+    form{
+        margin: 20px 56px;
     }
 
     .upload-file{
         padding: 10px 10px 10px 70px;
-        margin: 0px 0px 13px -31px;
+        margin: 16px 0px 24px -31px;
         border: 1px solid #34c9eb;
         width: 245px;
         border-radius: 10px;
@@ -199,18 +232,25 @@ form{
 
     .user-image{
         position: absolute;
-        width: 97px;
-        height: 95px;
-        border-radius: 90%;
-        margin: 204px -12px 6px 135px;
+        width: 110px;
+        height: 111px;
+        margin: -304px -12px 6px 129px;
     }
     
     .user-name{
-        margin: 318px 0px;
+        margin-top: -189px;
+        margin-right: -105px;
         font-size: 15px;
     }
 
+    .buttons{
+        display: flex;
+        width: 400px;
+        gap: 5px;
+        margin: -25px 13px;
+    }
+
     .download-button{
-        margin: 0px 20px 0px 1px;
+        margin: 0px 2px 0px 1px;
     }
 }
