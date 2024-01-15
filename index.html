@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GREEN GRASS REGISTRATION WAVE</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,900;1,100;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
 </head>
-<body>
+<body onload="autoClick();">
     <section class="main-section">
         <div class="main-container">
             <h1 class="main-heading">GREEN GRASS REGISTRATION WAVE</h1>
@@ -23,18 +25,19 @@
         </div>
         
         <div id="resultSection" class="main-section-two" style="display: none;">
-            <div class="main-container-two">
+            <div id="htmlContent" class="main-container-two">
+                <img src="./images/frameTwo.png" class="main-image" alt="frame" />
                 <img id="resultImage" alt="user-image" class="user-image">
                 <h4 id="resultUsername" class="user-name">User Name</h4>
             </div>
-            <<div class="buttons">
-                <button class="download-button">Save to Gallery</button>
+            <div class="buttons">
+                <a class="download-button" id="download">Save to gallery</a>
                 <button class="refresh-button" onclick="pageRefresh()">Give me One more Chance</button>
             </div>
         </div>
     </section>
 
-    <script>
+    <script type="text/javascript">
         document.getElementById('submitButton').addEventListener('click', function() {
 
             // Get form data
@@ -60,9 +63,29 @@
                 // Show the result section and hide the registration form
                 document.querySelector('.main-container').style.display = 'none';
                 document.getElementById('resultSection').style.display = 'block';
-            }else{
+            } else {
                 alert("Check your datas One more time, Something Went Wrong");
             }
+        });
+
+        function autoClick(){
+            $("#download").click();
+        }
+
+        $(document).ready(function(){
+            window.onload = function() {
+                var element = $("#htmlContent")[0];
+
+                $("#download").on("click", function(){
+                    html2canvas(element, {
+                        onrendered: function(canvas){
+                            var imageData = canvas.toDataURL("image/jpeg");  // Use "image/jpeg" instead of "image/jpg"
+                            var newData = imageData.replace(/^data:image\/jpeg/, "data:application/octet-stream");
+                            $("#download").attr("download", "image.jpg").attr("href", newData);
+                        }
+                    });
+                });
+            };
         });
 
         function pageRefresh(){
